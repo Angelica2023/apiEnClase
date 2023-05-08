@@ -24,7 +24,7 @@ import usuarios from "./usuarios.json" assert { type: "json" };
 
     //Busqueda en API
 
-    async function DatosdeApi() {
+    async function findAllCharacters() {
 
       const datosEncontrados = await  fetch(
         "https://rickandmortyapi.com/api/character"
@@ -35,4 +35,4 @@ import usuarios from "./usuarios.json" assert { type: "json" };
       return  console.log(datosConvertidos);
     }
     
-    DatosdeApi()
+    findAllCharacters()
