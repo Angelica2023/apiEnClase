@@ -8,7 +8,9 @@ import usuarios from "./usuarios.json" assert { type: "json" };
 
  if (usuarios.length > 0) {
         // El arreglo no está vacío
-        resolve("Los usuarios son:",usuarios);
+         // console.log (usuarios)
+        resolve(
+          console.log ("Los usuarios son:",usuarios));
       } else {
         // El arreglo está vacío
        reject("ERROR al buscar usuarios");
@@ -17,5 +19,5 @@ import usuarios from "./usuarios.json" assert { type: "json" };
   });
   
   promesaPorCumplir
-    .then((respuesta) => console.log(usuarios))
+    .then((respuesta) => console.log(respuesta))
     .catch((error) => console.log(error));
