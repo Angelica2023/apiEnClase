@@ -21,3 +21,18 @@ import usuarios from "./usuarios.json" assert { type: "json" };
   promesaPorCumplir
     .then((respuesta) => console.log(respuesta))
     .catch((error) => console.log(error));
+
+    //Busqueda en API
+
+    async function DatosdeApi() {
+
+      const datosEncontrados = await  fetch(
+        "https://rickandmortyapi.com/api/character"
+      );
+    
+       const datosConvertidos = await  datosEncontrados.json()
+    
+      return  console.log(datosConvertidos);
+    }
+    
+    DatosdeApi()
