@@ -30,9 +30,22 @@ import usuarios from "./usuarios.json" assert { type: "json" };
         "https://rickandmortyapi.com/api/character"
       );
     
-       const datosConvertidos = await  datosEncontrados.json()
+       const datosDevueltos = await  datosEncontrados.json()
     
-      return  console.log(datosConvertidos);
+      return  console.log(datosDevueltos);
     }
     
     findAllCharacters()
+
+    async function findAllCharacters17() {
+
+      const datosEncontrado17 = await  fetch(
+        "https://rickandmortyapi.com/api/character/17"
+      );
+    
+       const datos17 = await  datosEncontrado17.json()
+    
+      return  console.log(datos17);
+      
+    }
+    findAllCharacters17()
